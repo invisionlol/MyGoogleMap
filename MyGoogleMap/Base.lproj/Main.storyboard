@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cN1-hC-8hX">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Codemobile.Ltd-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyGoogleMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DPU-cM-dxd" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="739"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uei-PH-QKH">
+                                <rect key="frame" x="0.0" y="827" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ekb-5z-ODC"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" id="zqf-zn-vGS">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="BF5-97-vik">
+                                            <rect key="frame" x="20" y="7" width="374" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Standard"/>
+                                                <segment title="Satellite"/>
+                                                <segment title="Hybrid"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="switchMapTypeWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="VD8-Wt-VHf"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Uei-PH-QKH" firstAttribute="top" secondItem="DPU-cM-dxd" secondAttribute="bottom" id="Lq2-t3-CWz"/>
+                            <constraint firstItem="DPU-cM-dxd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qav-7Y-YqT"/>
+                            <constraint firstAttribute="bottom" secondItem="Uei-PH-QKH" secondAttribute="bottom" constant="25" id="Xno-9K-HVz"/>
+                            <constraint firstItem="Uei-PH-QKH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iYd-DH-2y7"/>
+                            <constraint firstItem="Uei-PH-QKH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uPc-LA-yB3"/>
+                            <constraint firstItem="DPU-cM-dxd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xgY-qm-nsW"/>
+                            <constraint firstItem="DPU-cM-dxd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yoM-4E-uS8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Codemobile.Ltd" id="ja8-9t-UuP">
+                        <barButtonItem key="rightBarButtonItem" image="icon_search" id="6iJ-23-rbU">
+                            <connections>
+                                <action selector="onClickSearchWithSender:" destination="BYZ-38-t0r" id="5qN-VP-6Hz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mMapView" destination="DPU-cM-dxd" id="hbd-eb-VqJ"/>
+                        <segue destination="ZCe-mF-rrC" kind="push" identifier="Street" id="xCV-Ij-cqs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="89.732142857142847"/>
+        </scene>
+        <!--Street View-->
+        <scene sceneID="qxd-1K-jS5">
+            <objects>
+                <viewController id="ZCe-mF-rrC" customClass="StreetViewController" customModule="MyGoogleMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xhT-IX-9b7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vke-QM-azG" customClass="GMSPanoramaView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="527.5"/>
+                                <color key="backgroundColor" red="0.43654394219999998" green="0.80142891839999997" blue="0.6867933544" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XUx-0E-BIo">
+                                <rect key="frame" x="0.0" y="615.5" width="414" height="246.5"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="61F-Ik-2ac" appends="YES" id="Gf7-ua-TJD"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XUx-0E-BIo" firstAttribute="top" secondItem="Vke-QM-azG" secondAttribute="bottom" id="CGC-hH-4ER"/>
+                            <constraint firstItem="Vke-QM-azG" firstAttribute="top" secondItem="XhT-hu-Kfv" secondAttribute="top" id="Gxv-jf-6HW"/>
+                            <constraint firstItem="XUx-0E-BIo" firstAttribute="trailing" secondItem="XhT-hu-Kfv" secondAttribute="trailing" id="WBW-6c-Dgu"/>
+                            <constraint firstItem="Vke-QM-azG" firstAttribute="leading" secondItem="XhT-hu-Kfv" secondAttribute="leading" id="bTp-yQ-YGj"/>
+                            <constraint firstItem="XUx-0E-BIo" firstAttribute="bottom" secondItem="XhT-hu-Kfv" secondAttribute="bottom" id="eEt-3m-cd7"/>
+                            <constraint firstItem="Vke-QM-azG" firstAttribute="trailing" secondItem="XhT-hu-Kfv" secondAttribute="trailing" id="fk9-kC-AuG"/>
+                            <constraint firstItem="XhT-hu-Kfv" firstAttribute="bottom" secondItem="Vke-QM-azG" secondAttribute="bottom" multiplier="1.4" id="jqI-VR-vsH"/>
+                            <constraint firstItem="XUx-0E-BIo" firstAttribute="leading" secondItem="XhT-hu-Kfv" secondAttribute="leading" id="rvI-Jy-cRu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XhT-hu-Kfv"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Street View" id="ofo-tB-Lxo"/>
+                    <connections>
+                        <outlet property="mMapImageView" destination="XUx-0E-BIo" id="i2d-Wh-RQP"/>
+                        <outlet property="mStreetView" destination="Vke-QM-azG" id="syJ-H1-MB1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2D-sJ-4aB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="61F-Ik-2ac">
+                    <connections>
+                        <action selector="onClickNavigation" destination="ZCe-mF-rrC" id="eHM-Op-g3R"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1891.304347826087" y="89.732142857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yJg-gy-A2G">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cN1-hC-8hX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lUH-Y5-fZb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wDw-7V-vYw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o8t-Hy-BCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="90"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_search" width="25" height="24.5"/>
+    </resources>
+</document>

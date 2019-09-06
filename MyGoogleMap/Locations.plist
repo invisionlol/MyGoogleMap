@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>address</key>
+		<string>Pathum Wan, Bangkok 10330, Thailand</string>
+		<key>latitude</key>
+		<real>13.7463129</real>
+		<key>longitude</key>
+		<real>100.53279</real>
+		<key>name</key>
+		<string>Siam Discovery</string>
+		<key>type</key>
+		<string>1</string>
+		<key>image</key>
+		<string>cmdev_pin_01.png</string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>494 Rajdamri Rd, Pathum Wan, Bangkok 10330, Thailand</string>
+		<key>latitude</key>
+		<real>13.7468091</real>
+		<key>longitude</key>
+		<real>100.5391792</real>
+		<key>name</key>
+		<string>Central World</string>
+		<key>type</key>
+		<string>1</string>
+		<key>image</key>
+		<string>cmdev_pin_02.png</string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>Lumphini, Pathum Wan, Bangkok 10330, Thailand</string>
+		<key>latitude</key>
+		<real>13.7348454</real>
+		<key>longitude</key>
+		<real>100.5386221</real>
+		<key>name</key>
+		<string>Thai Red Cross Disaster Operations Center</string>
+		<key>type</key>
+		<string>2</string>
+		<key>image</key>
+		<string>cmdev_pin_03.png</string>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>Pathum Wan, Bangkok 10330, Thailand</string>
+		<key>latitude</key>
+		<real>13.7394706</real>
+		<key>longitude</key>
+		<real>100.525128</real>
+		<key>name</key>
+		<string>Chulalongkorn University</string>
+		<key>type</key>
+		<string>0</string>
+		<key>image</key>
+		<string>cmdev_pin_04.png</string>
+	</dict>
+</array>
+</plist>

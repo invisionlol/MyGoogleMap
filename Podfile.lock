@@ -1,0 +1,46 @@
+PODS:
+  - Alamofire (5.0.0-beta.7)
+  - AlamofireImage (4.0.0-beta.3):
+    - Alamofire (~> 5.0.0-beta.6)
+  - DynamicColor (4.1.0)
+  - GoogleMaps (3.3.0):
+    - GoogleMaps/Maps (= 3.3.0)
+  - GoogleMaps/Base (3.3.0)
+  - GoogleMaps/Maps (3.3.0):
+    - GoogleMaps/Base
+  - GooglePlaces (3.3.0):
+    - GoogleMaps/Base (= 3.3.0)
+  - LMGeocoder (1.0.3)
+  - RandomColorSwift (1.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.5)
+  - AlamofireImage (= 4.0.0-beta.3)
+  - DynamicColor (~> 4.0)
+  - GoogleMaps
+  - GooglePlaces
+  - LMGeocoder (= 1.0.3)
+  - RandomColorSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - DynamicColor
+    - GoogleMaps
+    - GooglePlaces
+    - LMGeocoder
+    - RandomColorSwift
+
+SPEC CHECKSUMS:
+  Alamofire: bd07938ceecad59d2492aeecb1f785a8f2721160
+  AlamofireImage: 980b4eccaed1fa559d78bc479d067ff89d23bc95
+  DynamicColor: e72fcf4174518c514e862bb4bdea794c1865b412
+  GoogleMaps: cfee83da305b9aaeccf92c24ac79df11c3003492
+  GooglePlaces: 1e2a87bd9efee9623ee65d44ecc35ebfecd7b13c
+  LMGeocoder: 100572f9e572a26d3506ee0604d6629bea391767
+  RandomColorSwift: 9f85058b721665d52d239ca166a913e083506444
+
+PODFILE CHECKSUM: d3c61acefdbb93c471e36347f2d8daae6caf7649
+
+COCOAPODS: 1.7.5
